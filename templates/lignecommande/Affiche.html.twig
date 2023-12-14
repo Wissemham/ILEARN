@@ -1,0 +1,22 @@
+<style>
+table, th, td {
+  border: 3px solid black;
+  padding: 0px;
+}
+</style>
+<table>
+{% for i in ll %}
+<tr>
+<td>
+{{i.prix}}
+</td>
+{% for j in ff %}
+{% if i.idformation == j.idformation %}
+<td>
+{{j.nomformation}}
+</td>
+{% endif %}
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
